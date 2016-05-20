@@ -58,3 +58,11 @@ It s about this particular case :
 echo "some" > tailed.txt
 echo "else" > tailed.txt
 ```
+
+# As a binary
+
+```sh
+npm i @mh-cbon/tail-fs-readable -g
+tailf some.txt
+  ctrl+c to quit
+```
