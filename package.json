@@ -1,6 +1,6 @@
 {
   "name": "@mh-cbon/tail-fs-readable",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A readable stream to tail a file",
   "main": "index.js",
   "scripts": {
@@ -14,7 +14,9 @@
     "public": "npm publish --access=public"
   },
   "keywords": [
-    "readable", "tail", "file"
+    "readable",
+    "tail",
+    "file"
   ],
   "author": "mh-cbon <mh-cbon@users.noreply.github.com>",
   "license": "MIT",
