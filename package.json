@@ -1,0 +1,25 @@
+{
+  "name": "@mh-cbon/tail-fs-readable",
+  "version": "1.0.0",
+  "description": "A readable stream to tail a file",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "patch": "npm version patch -m \"patch %s\"",
+    "minor": "npm version minor -m \"minor %s\"",
+    "major": "npm version major -m \"major %s\"",
+    "preversion": "echo \"npm test: not defined\"",
+    "version": "echo \"npm run build: not defined\"",
+    "postversion": "git push && git push --tags && npm run public",
+    "public": "npm publish --access=public"
+  },
+  "keywords": [
+    "readable", "tail", "file"
+  ],
+  "author": "mh-cbon <mh-cbon@users.noreply.github.com>",
+  "license": "MIT",
+  "dependencies": {
+    "debug": "^2.2.0",
+    "mississippi": "^1.2.0"
+  }
+}
