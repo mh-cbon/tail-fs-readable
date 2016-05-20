@@ -9,6 +9,9 @@ var tailFs = tailFsreadable('./some.txt')
 .on('end', function () {
   console.log('END')
 })
+.on('reached-end', function () {
+  console.log('REACHED END')
+})
 .on('close', function () {
   console.log('CLOSE')
 });

@@ -27,6 +27,9 @@ var stream = tailFs('somefile')
 .on('end', function () {
   console.log('END')
 })
+.on('reached-end', function () {
+  console.log('REACHED END')
+})
 .on('close', function () {
   console.log('CLOSE')
 });

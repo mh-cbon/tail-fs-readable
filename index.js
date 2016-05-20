@@ -55,7 +55,7 @@ var tailFsReadable = function (fPath, opts) {
     debug('========= toRead %s start.pos %s', toRead, stats.pos);
     var buf = Buffer.alloc ? Buffer.alloc(toRead) : new Buffer(toRead);
     var blen = 0;
-    fs.createReadStream(fPath, {start: stats.pos-1, end: stats.pos-1+toRead})
+    fs.createReadStream(fPath, {start: stats.pos, end: stats.pos+toRead})
     .on('error', function (voidErr) {
       done && done(voidErr);
       done = null;
@@ -71,12 +71,14 @@ var tailFsReadable = function (fPath, opts) {
   }
 
   var read = function(size, next) {
+    var that = this;
     debug('========= %s %s %s', size, stats.pos , stats.size);
     var fnPullPush = function (shouldClose) {
       if (shouldClose) return next(null, null);
       getANewBuffer(size, function (err, buf) {
         if (err) return debug(err);
         stats.pos+=buf.length;
+        if (stats.pos===stats.size) that.emit('reached-end');
         next(null, buf);
       })
     }
