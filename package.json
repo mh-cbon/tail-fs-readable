@@ -1,6 +1,6 @@
 {
   "name": "@mh-cbon/tail-fs-readable",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A readable stream to tail a file",
   "main": "index.js",
   "bin": {
