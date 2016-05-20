@@ -35,7 +35,7 @@ stream.pipe(process.stdout);
 
 setTimeout(function () {
   stream.close();
-})
+}, 1500)
 ```
 
 ### Options
